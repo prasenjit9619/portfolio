@@ -1,0 +1,25 @@
+name: Deploy to GitHub Pages
+
+on:
+  push:
+    branches: [ main ]
+
+jobs:
+  build-and-deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v2
+
+      - name: Update Config
+        run: |
+          sed -i 's/__CLIENT_ID__/${{ secrets.GOOGLE_CLIENT_ID }}/g' assets/js/config.js
+          sed -i 's/__API_KEY__/${{ secrets.GOOGLE_API_KEY }}/g' assets/js/config.js
+          sed -i 's/__PROPERTY_ID__/${{ secrets.GOOGLE_PROPERTY_ID }}/g' assets/js/config.js
+
+      - name: Deploy
+        uses: JamesIves/github-pages-deploy-action@v4
+        with:
+          folder: .
+          branch: gh-pages
+          clean: true

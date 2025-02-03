@@ -1,6 +1,6 @@
-const CLIENT_ID = '357653556115-m4kf92vjfe3h2u7h7ju91ne3b1kov7gh.apps.googleusercontent.com'; // Get this from Google Cloud Console
-const API_KEY = 'AIzaSyBpO6CbY1fC_SQi_26_5zli9rSelWuMf8E'; // Get this from Google Cloud Console
-const PROPERTY_ID = '475883216'; // Your GA4 property ID
+const CLIENT_ID = config.clientId;
+const API_KEY = config.apiKey;
+const PROPERTY_ID = config.propertyId;
 
 function initializeAnalytics() {
   gapi.load('client:auth2', async () => {
