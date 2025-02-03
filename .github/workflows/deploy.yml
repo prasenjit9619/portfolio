@@ -7,6 +7,12 @@ on:
 jobs:
   build-and-deploy:
     runs-on: ubuntu-latest
+    # Add permissions block
+    permissions:
+      contents: write
+      pages: write
+      id-token: write
+    
     steps:
       - name: Checkout
         uses: actions/checkout@v2
@@ -23,3 +29,5 @@ jobs:
           folder: .
           branch: gh-pages
           clean: true
+          # Add token
+          token: ${{ secrets.GITHUB_TOKEN }}
