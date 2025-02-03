@@ -1,5 +1,5 @@
 # Sensitive Information
-#assets/js/config.js
+assets/js/config.example.js
 .env
 *.env
 .env.*
