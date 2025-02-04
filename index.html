@@ -19,12 +19,16 @@
     connect-src 'self' 
         https://*.google-analytics.com 
         https://*.analytics.google.com 
-        https://*.googletagmanager.com;
+        https://*.googletagmanager.com
+        https://*.googleapis.com;
     style-src 'self' 'unsafe-inline' 
         https://*.googleapis.com;
     font-src 'self' data:
         https://*.gstatic.com 
-        https://*.googleapis.com;">
+        https://*.googleapis.com;
+    frame-src 'self'
+        https://*.googleapis.com
+        https://content-analyticsdata.googleapis.com/;">
 
 
   <!-- Google tag (gtag.js) -->
