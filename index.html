@@ -20,7 +20,8 @@
         https://*.google-analytics.com 
         https://*.analytics.google.com 
         https://*.googletagmanager.com
-        https://*.googleapis.com;
+        https://*.googleapis.com
+        https://content-analyticsdata.googleapis.com;
     style-src 'self' 'unsafe-inline' 
         https://*.googleapis.com;
     font-src 'self' data:
@@ -30,7 +31,9 @@
         https://*.googleapis.com
         https://content-analyticsdata.googleapis.com/
         https://accounts.google.com/
-        https://*.google.com;">
+        https://*.google.com;
+    child-src 'self'
+        https://accounts.google.com/;">
 
 
   <!-- Google tag (gtag.js) -->

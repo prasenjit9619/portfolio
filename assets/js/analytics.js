@@ -1,4 +1,9 @@
 (function() {
+  if (!config || !config.clientId || !config.apiKey || !config.propertyId) {
+    console.error('Analytics config missing');
+    return;
+  }
+
   const CLIENT_ID = config.clientId;
   const API_KEY = config.apiKey;
   const PROPERTY_ID = config.propertyId;
@@ -6,14 +11,15 @@
 
   async function initializeAnalytics() {
     try {
+      // Initialize the JavaScript client library
       await gapi.client.init({
         apiKey: API_KEY,
         clientId: CLIENT_ID,
-        scope: SCOPES,
-        discoveryDocs: ['https://analyticsdata.googleapis.com/$discovery/rest?version=v1beta']
+        discoveryDocs: ['https://analyticsdata.googleapis.com/$discovery/rest?version=v1beta'],
+        scope: SCOPES
       });
 
-      // Check if we need to sign in
+      // Handle auth
       if (!gapi.auth2.getAuthInstance().isSignedIn.get()) {
         await gapi.auth2.getAuthInstance().signIn();
       }
@@ -25,26 +31,14 @@
     }
   }
 
-  async function fetchVisitorCount() {
-    try {
-      const response = await gapi.client.analyticsdata.properties.runReport({
-        property: `properties/${PROPERTY_ID}`,
-        dateRanges: [{
-          startDate: '2020-01-01',
-          endDate: 'today'
-        }],
-        metrics: [{
-          name: 'totalUsers'
-        }]
-      });
-
-      const visitorCount = response.result.rows[0].metricValues[0].value;
-      document.getElementById('visitor-count').textContent = visitorCount;
-    } catch (error) {
-      console.error('Analytics Error:', error);
-      document.getElementById('visitor-count').textContent = '---';
-    }
+  function loadAnalytics() {
+    gapi.load('client:auth2', initializeAnalytics);
   }
 
-  gapi.load('client:auth2', initializeAnalytics);
+  // Wait for page load
+  if (document.readyState !== 'loading') {
+    loadAnalytics();
+  } else {
+    document.addEventListener('DOMContentLoaded', loadAnalytics);
+  }
 })();
