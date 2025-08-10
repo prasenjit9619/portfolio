@@ -19,9 +19,9 @@ jobs:
 
       - name: Update Config
         run: |
-          sed -i 's/__CLIENT_ID__/${{ secrets.GOOGLE_CLIENT_ID }}/g' assets/js/config.js
-          sed -i 's/__API_KEY__/${{ secrets.GOOGLE_API_KEY }}/g' assets/js/config.js
-          sed -i 's/__PROPERTY_ID__/${{ secrets.GOOGLE_PROPERTY_ID }}/g' assets/js/config.js
+          sed -i 's/__CLIENT_ID__/${{ secrets.GOOGLE_CLIENT_ID }}/g' assets/config.js
+          sed -i 's/__API_KEY__/${{ secrets.GOOGLE_API_KEY }}/g' assets/config.js
+          sed -i 's/__PROPERTY_ID__/${{ secrets.GOOGLE_PROPERTY_ID }}/g' assets/config.js
 
       - name: Deploy
         uses: JamesIves/github-pages-deploy-action@v4
