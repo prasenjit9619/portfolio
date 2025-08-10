@@ -110,3 +110,10 @@ Clicking any certificate image opens it in a full-screen overlay.
 Clicking anywhere on the overlay closes it.
 
 Works with any image link that has data-lightbox.
+
+
+
+
+const saved = localStorage.getItem('theme');
+const current = document.documentElement.getAttribute('data-theme');
+const mode = saved || current || (prefersDark.matches ? 'dark' : 'light');
