@@ -23,7 +23,8 @@ document.addEventListener('DOMContentLoaded', () => {
   }
   function initTheme() {
     const saved = localStorage.getItem('theme');
-    const mode = saved || (prefersDark.matches ? 'dark' : 'light');
+    // const mode = saved || (prefersDark.matches ? 'dark' : 'light');
+    const mode = saved || 'dark';
     applyTheme(mode);
   }
   initTheme();
