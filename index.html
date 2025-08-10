@@ -1,336 +1,578 @@
 <!DOCTYPE html>
-<html lang="en">
-
+<html lang="en" data-theme="dark">
 <head>
-  
-  <!-- 
-  <meta http-equiv="Content-Security-Policy" content="
-    default-src 'self';
-    script-src 'self' 'unsafe-inline' 'unsafe-eval' 
-        https://*.google-analytics.com 
-        https://*.googleapis.com 
-        https://*.googletagmanager.com 
-        https://*.google.com 
-        https://*.gstatic.com;
-    img-src 'self' 
-        https://*.google-analytics.com 
-        https://*.googleapis.com 
-        https://*.gstatic.com 
-        data:;
-    connect-src 'self' 
-        https://*.google-analytics.com 
-        https://*.analytics.google.com 
-        https://*.googletagmanager.com
-        https://*.googleapis.com
-        https://content-analyticsdata.googleapis.com;
-    style-src 'self' 'unsafe-inline' 
-        https://*.googleapis.com;
-    font-src 'self' data:
-        https://*.gstatic.com 
-        https://*.googleapis.com;
-    frame-src 'self'
-        https://*.googleapis.com
-        https://content-analyticsdata.googleapis.com/
-        https://accounts.google.com/
-        https://*.google.com
-        https://www.gstatic.com;">
-  -->
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
 
+  <title>Prasenjit Das — Ethical AI & BI | Data Engineering, Dashboards, ETL</title>
+  <meta name="description" content="Prasenjit Das builds ethical, actionable AI/BI solutions—data engineering, analytics, and dashboards that drive sustainable decisions." />
+  <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1" />
+  <link rel="canonical" href="https://www.yourdomain.com/" />
 
+  <!-- Open Graph -->
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Prasenjit Das — Ethical AI & BI" />
+  <meta property="og:description" content="Ethical, actionable AI/BI solutions: data engineering, analytics, dashboards." />
+  <meta property="og:url" content="https://www.yourdomain.com/" />
+  <meta property="og:image" content="https://www.yourdomain.com/assets/hero-bg.jpg" />
 
-  <!-- Google tag (gtag.js) -->
-  <!-- <script async src="https://www.googletagmanager.com/gtag/js?id=G-E1742H1Z9Y"></script>
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Prasenjit Das — Ethical AI & BI" />
+  <meta name="twitter:description" content="Ethical, actionable AI/BI solutions: data engineering, analytics, dashboards." />
+  <meta name="twitter:image" content="https://www.yourdomain.com/assets/hero-bg.jpg" />
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Source+Serif+4:wght@400;600&display=swap" rel="stylesheet" />
+
+  <link rel="stylesheet" href="styles.css" />
+
+  <!-- Google Analytics (GA4): replace G-XXXXXXXXXX -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
   <script>
     window.dataLayer = window.dataLayer || [];
     function gtag(){dataLayer.push(arguments);}
     gtag('js', new Date());
+    gtag('config', 'G-XXXXXXXXXX', { anonymize_ip: true });
+  </script>
 
-    gtag('config', 'G-E1742H1Z9Y');
-  </script> -->
-
-  <!-- Add these scripts after existing Google Analytics tag -->
-  <!-- <script src="assets/js/config.js"></script>
-  <script src="https://apis.google.com/js/api.js"></script>
-  <script src="https://accounts.google.com/gsi/client"></script>
-  <script src="assets/js/analytics.js"></script>  -->
-
-  
-
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Prasenjit Das</title>
-
-  <!-- SEO Meta Tags -->
-  <meta name="description" content="Prasenjit Das - Data Warehouse Developer and BI Analyst with expertise in ETL/ELT, SQL, and Business Intelligence tools">
-  <meta name="keywords" content="Data Warehouse, ETL, ELT, BI Analyst, SQL, Business Intelligence, Developer">
-  <meta name="author" content="Prasenjit Das">
-  
-  <!-- Open Graph Meta Tags -->
-  <!-- <meta property="og:title" content="Prasenjit Das - Data Warehouse Developer">
-  <meta property="og:description" content="Professional portfolio of Prasenjit Das, specializing in Data Warehouse development and Business Intelligence">
-  <meta property="og:image" content="assets/img/my-profile-img.jpg">
-  <meta property="og:url" content="https://prasenjit9619.github.io/portfolio/"> -->
-
-  <!-- Favicons -->
-  <link href="assets/img/favicon.png" rel="icon">
-  <link href="assets/img/favicon.png" rel="apple-touch-icon">
-
-  <!-- Fonts -->
-  <link href="https://fonts.googleapis.com" rel="preconnect">
-  <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
-
-  <!-- Vendor CSS Files -->
-  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
-  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
-  <link href="assets/vendor/aos/aos.css" rel="stylesheet">
-  <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
-  <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
-
-  <!-- Main CSS File -->
-  <link href="assets/css/main.css" rel="stylesheet">
-  <!-- <link href="assets/css/dark-theme.css" rel="stylesheet"> -->
-
+  <!-- JSON-LD (Person) -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "Prasenjit Das",
+    "url": "https://www.yourdomain.com/",
+    "image": "https://www.yourdomain.com/assets/avatar.jpg",
+    "jobTitle": "Senior BI Analyst & Data Engineer",
+    "address": { "@type": "PostalAddress", "addressLocality": "Dhaka", "addressCountry": "Bangladesh" },
+    "sameAs": [
+      "https://www.linkedin.com/in/prasenjit9619",
+      "https://github.com/prasenjit9619",
+      "https://prasenjit9619.github.io"
+    ]
+  }
+  </script>
 </head>
+<body>
+  <!-- Header -->
+  <header class="site-header">
+    <div class="container nav">
+      <a href="#" class="brand">
+        <span class="brand-mark" aria-hidden="true">◆</span>
+        <span class="brand-text">Prasenjit</span>
+      </a>
 
-<body class="index-page">
+      <!-- Primary nav -->
+      <nav class="nav-menu" aria-label="Primary">
+        <ul id="primaryNav">
+          <!-- Keep full list here; JS will move overflow items into the More dropdown on desktop -->
+          <li><a href="#about" class="nav-link">About</a></li>
+          <li><a href="#interests" class="nav-link">Interests</a></li>
+          <li><a href="#education" class="nav-link">Education</a></li>
+          <li><a href="#experience" class="nav-link">Experience</a></li>
+          <li><a href="#awards" class="nav-link">Awards</a></li>
+          <li><a href="#publications" class="nav-link">Publications</a></li>
 
-  <header id="header" class="header dark-background d-flex flex-column">
-    <i class="header-toggle d-xl-none bi bi-list"></i>
+          <li class="nav-more has-dropdown" id="navMore">
+            <button class="dropdown-toggle" aria-expanded="false"
+                    aria-haspopup="true" aria-controls="moreMenu">More ▾</button>
+            <ul id="moreMenu" class="dropdown-menu" role="menu"></ul>
+          </li>
 
-    <div class="profile-img">
-      <!-- <button id="toggle-theme" class="theme-btn">🌙</button> -->
-      <img src="assets/img/my-profile-img.jpg" alt="" class="img-fluid rounded-circle">
+          <li><a href="#training" class="nav-link">Training</a></li>
+          <li><a href="#certifications" class="nav-link">Certifications</a></li>
+          <li><a href="#extracurricular" class="nav-link">Activities</a></li>
+          <li><a href="#contact" class="nav-link">Contact</a></li>
+        </ul>
+      </nav>
+
+      <!-- Rightmost: More ▾, theme, hamburger -->
+      <div class="header-actions">
+        <!-- <div class="nav-more has-dropdown" id="navMore">
+          <button class="dropdown-toggle" aria-expanded="false" aria-haspopup="true" aria-controls="moreMenu">More ▾</button>
+          <ul id="moreMenu" class="dropdown-menu" role="menu"></ul>
+        </div> -->
+
+        <button id="themeToggle" class="theme-toggle" aria-label="Toggle theme" title="Toggle theme">☀️</button>
+
+        <button class="nav-toggle" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="bar"></span><span class="bar"></span><span class="bar"></span>
+        </button>
+      </div>
     </div>
-
-    <a href="index.html" class="logo d-flex align-items-center justify-content-center">
-      <!-- Uncomment the line below if you also wish to use an image logo -->
-      <!-- <img src="assets/img/logo.png" alt=""> -->
-      <h1 class="sitename">Prasenjit Das</h1>
-    </a>
-
-    <div class="social-links text-center">
-      <a href="https://x.com/zreptilia" class="twitter"><i class="bi bi-twitter-x"></i></a>
-      <!--<a href="#" class="google-plus"><i class="bi bi-skype"></i></a>-->
-      <a href="https://www.linkedin.com/in/prasenjit9619" class="linkedin"><i class="bi bi-linkedin"></i></a>
-      <a href="https://github.com/prasenjit9619" class="github"><i class="bi bi-github"></i></a>
-    </div>
-
-    <nav id="navmenu" class="navmenu">
-      <ul>
-        <li><a href="#home" class="active"><i class="bi bi-house navicon"></i>Home</a></li>
-        <!--<li><a href="#about"><i class="bi bi-person navicon"></i> About</a></li>-->
-        <li><a href="#resume"><i class="bi bi-file-earmark-text navicon"></i> Resume</a></li>
-        <!--<li><a href="#portfolio"><i class="bi bi-images navicon"></i> Portfolio</a></li>-->
-        <!--<li><a href="#services"><i class="bi bi-hdd-stack navicon"></i> Services</a></li>-->
-        <!--<li class="dropdown"><a href="#"><i class="bi bi-menu-button navicon"></i> <span>Dropdown</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
-          <ul>
-            <li><a href="#">Dropdown 1</a></li>
-            <li class="dropdown"><a href="#"><span>Deep Dropdown</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
-              <ul>
-                <li><a href="#">Deep Dropdown 1</a></li>
-                <li><a href="#">Deep Dropdown 2</a></li>
-                <li><a href="#">Deep Dropdown 3</a></li>
-                <li><a href="#">Deep Dropdown 4</a></li>
-                <li><a href="#">Deep Dropdown 5</a></li>
-              </ul>
-            </li>
-            <li><a href="#">Dropdown 2</a></li>
-            <li><a href="#">Dropdown 3</a></li>
-            <li><a href="#">Dropdown 4</a></li>
-          </ul>
-        </li>-->
-        <!--<li><a href="#contact"><i class="bi bi-envelope navicon"></i> Contact</a></li>-->
-
-      </ul>
-    </nav>
-
   </header>
 
-  <main class="main">
+  <!-- Main -->
+  <main>
+    <!-- Hero -->
+    <section id="about" class="section hero" role="banner" aria-label="Hero">
+      <div class="hero-bg" aria-hidden="true"></div>
+      <div class="container hero-grid">
 
-    <!-- Hero Section -->
-    <section id="home" class="home section dark-background">
+        <div class="hero-media">
+          <figure class="avatar">
+            <img src="assets/avatar.jpg" alt="Portrait of Prasenjit Das" />
+          </figure>
+        </div>
 
-      <img src="assets/img/home-bg.jpeg" alt="" data-aos="fade-in" class="">
-      <div class="container" data-aos="fade-up" data-aos-delay="100">
-        <h2>Prasenjit Das</h2>
-        <p> <span class="typed" data-typed-items="DWH Developer, ETL/ELT Specialist, BI Analyst"></span>
-          <span class="typed-cursor typed-cursor--blink" aria-hidden="true"></span>
-          <span class="typed-cursor typed-cursor--blink" aria-hidden="true"></span>
-        </p>
-      </div>
-    </section><!-- /Hero Section -->
+        <div class="hero-text">
+          <h1 class="title">Prasenjit Das</h1>
+          <p class="subtitle">Senior BI Analyst & Data Engineer • Founder, Ethical AI/BI Solutions</p>
+          <p class="lead">
+            I build clear, sustainable, and actionable intelligence—bridging data engineering, analytics, and responsible AI to help organizations make confident decisions.
+          </p>
+          <div class="cta">
+            <a class="btn primary" href="assets/Resume_Prasenjit_Das.pdf" target="_blank" rel="noopener">Download résumé</a>
 
+            <!-- Social icons beside résumé -->
+            <div class="cta-social" aria-label="Social links">
+              <a class="icon-btn" href="https://www.linkedin.com/in/prasenjit9619" target="_blank" rel="noopener" aria-label="LinkedIn" title="LinkedIn">
+                <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4.98 3.5C4.98 4.88 3.87 6 2.5 6S0 4.88 0 3.5 1.12 1 2.5 1 4.98 2.12 4.98 3.5zM.5 8h4V23h-4V8zm7 0h3.8v2.05h.05C12.18 8.68 13.83 8 15.62 8 20 8 21 10.79 21 15.02V23h-4v-6.97c0-1.66-.03-3.79-2.31-3.79-2.31 0-2.66 1.8-2.66 3.67V23h-4V8z"/></svg>
+              </a>
+              <a class="icon-btn" href="https://github.com/prasenjit9619" target="_blank" rel="noopener" aria-label="GitHub" title="GitHub">
+                <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 .5a12 12 0 0 0-3.79 23.4c.6.11.82-.26.82-.58 0-.29-.01-1.05-.02-2.06-3.34.73-4.04-1.61-4.04-1.61-.55-1.38-1.34-1.75-1.34-1.75-1.09-.75.08-.73.08-.73 1.2.08 1.83 1.24 1.83 1.24 1.07 1.83 2.8 1.3 3.48.99.11-.78.42-1.31.76-1.61-2.67-.31-5.48-1.34-5.48-5.96 0-1.32.47-2.39 1.24-3.23-.13-.31-.54-1.56.12-3.25 0 0 1.01-.32 3.31 1.23a11.5 11.5 0 0 1 6.02 0c2.3-1.55 3.31-1.23 3.31-1.23.66 1.69.25 2.94.12 3.25.77.84 1.24 1.91 1.24 3.23 0 4.63-2.81 5.64-5.49 5.94.43.37.81 1.1.81 2.23 0 1.61-.02 2.9-.02 3.29 0 .32.21.69.83.57A12 12 0 0 0 12 .5z"/></svg>
+              </a>
+              <a class="icon-btn" href="https://twitter.com/prasenjit9619" target="_blank" rel="noopener" aria-label="Twitter/X" title="Twitter/X">
+                <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M18.244 2H21l-6.53 7.46L22.5 22h-6.93l-5.42-7.06L3.9 22H1.14l7.09-8.1L1.5 2h6.93l4.95 6.45L18.244 2zm-1.21 18.2h1.91L7.06 3.8H5.15l11.88 16.4z"/></svg>
+              </a>
+              <a class="icon-btn" href="mailto:prasenjit9619@gmail.com" aria-label="Email" title="Email">
+                <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20 4H4c-1.1 0-2 .9-2 2v12a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V6c0-1.1-.9-2-2-2zm0 4-8 5-8-5V6l8 5 8-5v2z"/></svg>
+              </a>
+            </div>
 
-    <!-- Resume Section -->
-    <section id="resume" class="resume section">
-
-      <!-- Section Title -->
-      <div class="container section-title" data-aos="fade-up">
-        <h2>Resume</h2>
-        <p>I am an experienced Data Warehouse Developer and BI Analyst with over 4 years of hands-on experience in the e-commerce and banking sectors. 
-          My passion lies in designing ETL pipelines that ensure seamless data transitions with accuracy, while also leveraging data-driven insights to drive business growth.</p>
-      </div><!-- End Section Title -->
-
-      <div class="container">
-
-        <div class="row">
-
-          <div class="col-lg" data-aos="fade-up" data-aos-delay="100"> <!-- class="col-lg-6" -->
-            <h3 class="resume-title">Personal Detail</h3>
-
-            <div class="resume-item pb-0">
-              <h4>Prasenjit Das</h4>
-                <p><i class="bi bi-geo-alt-fill"></i> Dhaka, Bangladesh
-                  <br><i class="bi bi-telephone-fill"></i> +880 1725042634
-                  <br><i class="bi bi-envelope-fill"></i> prasenjit9619@gmail.com
-                  <br><i class="bi bi-linkedin"></i> linkedin.com/in/prasenjit9619
-                  <br><i class="bi bi-github"></i> github.com/prasenjit9619
-                </p>
-            </div><!-- Edn Resume Item -->
-            
-
-            <h3 class="resume-title">Education</h3>
-            <div class="resume-item">
-              <h4>Bachelor of Science in Computer Science</h4>
-              <p><em>BRAC University (2020)</em></p>
-              <!-- <h5>2016 - 2020</h5>        -->
-            </div><!-- Edn Resume Item -->
-
-            <div class="resume-item">
-              <h4>Higher Secondary Certificate</h4>
-              <p><em>Government Science College (2015)</em></p>
-              <!-- <p><em>2015</em></p> -->
-              <!-- <h5>2015</h5> -->
-            </div><!-- Edn Resume Item -->
-          <!-- </div>
-
-          <div class="col-lg-6" data-aos="fade-up" data-aos-delay="200"> -->
-
-            <h3 class="resume-title">Professional Experience</h3>
-            <div class="resume-item">
-              <h4>Associate Manager, Data Analytics & Engineering </h4>
-              <h5>2023/03 - Present</h5>
-              <p><em>BRAC Bank PLC</em></p>
-              <ul>
-                <li>Led the team in integrating Oracle Data Integrator (ODI) for the ETL process, replacing the legacy system to enhance
-                  efficiency and sustainability.</li>
-                <li>Develop and maintain the Data Warehouse (DWH) to ensure optimal performance and data integrity, driving sustainable
-                  data management practices.</li>
-                <li>Migrated the Power BI Server, ensuring a seamless transition and improved data visualization capabilities.</li>
-                <li>Create and monitor ETL pipelines to integrate data from systems like CBS, IRIS, CARDPRO, FSS, CyberSource, and UBA into
-                  the DWH, ensuring data accuracy and consistency.</li>
-                <li>Develop Power BI dashboards and maintain the server, facilitating data-driven decision-making and business intelligence.</li>
-                <li>Automate regular tasks using Python, Shell Scripting, and other tools to improve operational efficiency.</li>
-                <li>Provide analytical support to management for strategic decision-making and business growth.</li>
-              </ul>
-            </div><!-- Edn Resume Item -->
-
-            <div class="resume-item">
-              <h4> Business Intelligence Analyst </h4>
-              <h5>2022/12 - 2023/02</h5>
-              <p><em>foodpanda Bangladesh</em></p>
-              <ul>
-                <li>Built strong relationships with stakeholders to understand business challenges and propose sustainable data solutions
-                  using Google BigQuery, and other tools.</li>
-                <li>Managed data projects, analyzed large data sets to identify patterns and trends, and created automated reports using DBT
-                  and Tableau for KPI dashboards.</li>
-                <li>Collaborated with cross-functional teams to support data-driven decision-making and provided actionable insights using
-                  business intelligence tools.</li>
-                <li>Reviewed processes, identified areas for improvement, and proposed changes to promote sustainability and growth.</li>
-              </ul>
-            </div><!-- Edn Resume Item -->
-
-            <div class="resume-item">
-              <h4>  Senior Software Engineer </h4>
-              <h5>2022/10 - 2022/12</h5>
-              <p><em>Kovair Software, Inc</em></p>
-              <ul>
-                <li>Led a team of software engineers to develop and maintain ERP solutions for Indian fertilizer companies.</li>
-                <li>Fostered a culture of innovation and continuous improvement within the team.</li>
-                <li>Ensured project deadlines were met while maintaining high-quality standards.</li>
-              </ul>
-            </div><!-- Edn Resume Item -->
-
-            <div class="resume-item">
-              <h4> Software Engineer </h4>
-              <h5>2021/05 - 2022/09</h5>
-              <p><em>Kovair Software, Inc</em></p>
-              <ul>
-                <li>Developed ERP solutions for Indian fertilizer companies, optimizing business processes.</li>
-                <li>Written clean, well-documented, and maintainable code using JavaScript, Angular, jQuery, .NET Core, C#, SQL Server.</li>
-                <li>Developed and managed RESTful APIs to facilitate seamless integration and data exchange.</li>
-                <li>Developed and maintained ETL processes using MS SQL Server and SSIS to ensure accurate and efficient data handling.</li>
-                <li>Created comprehensive summaries, reports, and dashboards, providing valuable insights and data visualization.</li>
-                <li>Collaborated with stakeholders to gather requirements and deliver solutions that meet business objectives.</li>
-              </ul>
-            </div><!-- Edn Resume Item -->
-
-            
+            <!-- <a class="btn ghost" href="#contact">Contact</a> -->
           </div>
+
+          <!-- <ul class="quick-facts">
+            <li><strong>Location:</strong> Dhaka, Bangladesh</li>
+            <li><strong>Focus:</strong> AI/BI, ETL, Data Warehousing, Dashboards</li>
+            <li><strong>Values:</strong> Clarity • Trust • Sustainability</li>
+          </ul> -->
 
         </div>
 
       </div>
+    </section>
 
-    </section><!-- /Resume Section -->
+    <!-- Interests -->
+    <section id="interests" class="section">
+      <div class="container">
+        <h2 class="section-title">Interests</h2>
+        <p class="section-intro">What I explore and bring into client solutions.</p>
+        <div class="chip-group">
+          <span class="chip">Data Modeling</span>
+          <span class="chip">ETL & Orchestration (Airflow/SSIS)</span>
+          <span class="chip">SQL & Performance Tuning</span>
+          <span class="chip">Tableau & Power BI</span>
+          <span class="chip">Responsible AI</span>
+          <span class="chip">Computer Vision</span>
+          <span class="chip">MLOps</span>
+          <span class="chip">Sustainable Analytics</span>
+        </div>
 
-    
+        <div class="research-summary">
+          <p>
+            I’m actively pursuing research at the intersection of <strong>Ethical AI</strong>, <strong>Data Science</strong>, and <strong>Big Data</strong>—focusing on interpretability,
+            fairness, and robust, scalable systems. My goal is to develop methods that are academically rigorous and deployable in real-world, high-stakes
+            environments, collaborating with faculty on transparent models, bias mitigation, and human-centered decision support.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Education -->
+    <section id="education" class="section alt">
+      <div class="container">
+        <h2 class="section-title">Education</h2>
+
+        <div class="card-grid">
+          <article class="card edu-card">
+            <header class="card-header with-logo">
+              <img class="edu-logo" src="assets/logos/bracu.png" alt="BRAC University logo" />
+              <div class="edu-meta">
+                <h3>MS in Computer Science</h3>
+                <span class="meta">
+                  <a href="https://www.bracu.ac.bd/" target="_blank" rel="noopener">BRAC University</a> • Dhaka, Bangladesh • 2025 (Expected, CGPA 3.85)
+                </span>
+              </div>
+            </header>
+            <p>Thesis on machine learning with an applied focus on business impact and model interpretability. Expected graduation December 2025.</p>
+            <footer class="card-footer">
+              <span class="tag">Machine Learning</span>
+              <span class="tag">Interpretability</span>
+            </footer>
+          </article>
+
+          <article class="card edu-card">
+            <header class="card-header with-logo">
+              <img class="edu-logo" src="assets/logos/bracu.png" alt="BRAC University logo" />
+              <div class="edu-meta">
+                <h3>BS in Computer Science</h3>
+                <span class="meta">
+                  <a href="https://www.bracu.ac.bd/" target="_blank" rel="noopener">BRAC University</a> • Dhaka, Bangladesh • 2020 (CGPA 3.69)
+                </span>
+              </div>
+            </header>
+            <p>Thesis: Machine Learning & Black Swan Events (Supervisor: Prof. Mahbubul Alam Majumdar).</p>
+            <footer class="card-footer">
+              <span class="tag">Algorithms</span>
+              <span class="tag">Systems</span>
+            </footer>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Experience -->
+    <section id="experience" class="section">
+      <div class="container">
+        <h2 class="section-title">Experience</h2>
+
+        <div class="timeline">
+          <div class="timeline-item">
+            <div class="logo-badge">
+              <img src="assets/logos/bracbank.png" alt="BRAC Bank logo" />
+            </div>
+            <div class="timeline-card">
+              <header>
+                <h3>Associate Manager, Data Analytics & Engineering</h3>
+                <span class="meta">
+                  <a href="https://www.bracbank.com/" target="_blank" rel="noopener">BRAC Bank PLC</a> • Dhaka, Bangladesh • 2023/03–Present
+                </span>
+              </header>
+              <ul>
+                <li>Led the integration of Oracle Data Integrator (ODI) to replace legacy ETL and improve efficiency.</li>
+                <li>Built a near real-time Campaign Management Tool (CMT) for reward points/cashback and live monitoring.</li>
+                <li>Develop and maintain ETL pipelines from CBS, IRIS, CARDPRO, FSS, CyberSource, UBA, etc.</li>
+                <li>Develop Power BI dashboards and maintain the server for data-driven BI.</li>
+              </ul>
+              <footer class="tags">
+                <span class="tag">ODI</span><span class="tag">ETL</span><span class="tag">Real-time</span><span class="tag">Power BI</span>
+              </footer>
+            </div>
+          </div>
+
+          <div class="timeline-item">
+            <div class="logo-badge">
+              <img src="assets/logos/foodpanda.png" alt="foodpanda logo" />
+            </div>
+            <div class="timeline-card">
+              <header>
+                <h3>Business Intelligence Analyst</h3>
+                <span class="meta">
+                  <a href="https://www.foodpanda.com.bd/" target="_blank" rel="noopener">foodpanda Bangladesh</a> • Dhaka, Bangladesh • 2022/12–2023/03
+                </span>
+              </header>
+              <ul>
+                <li>Defined KPIs and delivered actionable insights with Tableau and BigQuery-based analysis.</li>
+                <li>Analyzed high-volume datasets to inform decisions and improve campaign effectiveness.</li>
+                <li>Generated data-driven recommendations supporting operational growth.</li>
+              </ul>
+              <footer class="tags">
+                <span class="tag">Tableau</span><span class="tag">BigQuery</span><span class="tag">KPIs</span>
+              </footer>
+            </div>
+          </div>
+
+          <div class="timeline-item">
+            <div class="logo-badge">
+              <img src="assets/logos/kovair.png" alt="Kovair Software logo" />
+            </div>
+            <div class="timeline-card">
+              <header>
+                <h3>Senior Software Engineer</h3>
+                <span class="meta">
+                  <a href="https://www.kovair.com/" target="_blank" rel="noopener">Kovair Software</a> • Kolkata, India • 2022/10–2022/12
+                </span>
+              </header>
+              <ul>
+                <li>Led a team building Raspberry ERP for fertilizer companies—warehouse, inventory, audit, supply chain.</li>
+                <li>Designed and optimized ETL with MS SQL Server and SSIS; performance-tuned T-SQL.</li>
+              </ul>
+              <footer class="tags">
+                <span class="tag">ERP</span><span class="tag">SSIS</span><span class="tag">T-SQL</span>
+              </footer>
+            </div>
+          </div>
+
+          <div class="timeline-item">
+            <div class="logo-badge">
+              <img src="assets/logos/kovair.png" alt="Kovair Software logo" />
+            </div>
+            <div class="timeline-card">
+              <header>
+                <h3>Software Engineer</h3>
+                <span class="meta">
+                  <a href="https://www.kovair.com/" target="_blank" rel="noopener">Kovair Software</a> • Kolkata, India • 2021/05–2022/09
+                </span>
+              </header>
+              <ul>
+                <li>Delivered business-aligned dashboards for stock reconciliation, audit, forecasting, and dispatch planning.</li>
+              </ul>
+              <footer class="tags">
+                <span class="tag">Reporting</span><span class="tag">Dashboards</span>
+              </footer>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Awards & Achievements -->
+    <section id="awards" class="section alt">
+      <div class="container">
+        <h2 class="section-title">Awards & Achievements</h2>
+        <div class="card-grid">
+          <article class="card award-card">
+            <header class="card-header">
+              <div class="card-title-meta">
+                <h3>2nd Runners-up — Robi Datathon 2.0</h3>
+                <span class="meta">2022/08</span>
+              </div>
+              <a class="thumb-link" href="https://example.com/robi-datathon-credential" target="_blank" rel="noopener" title="View credential">
+                <img class="award-thumb" src="assets/certificates/robi_datathon.jpg" alt="Robi Datathon 2.0 certificate thumbnail" />
+              </a>
+            </header>
+            <p>Solving business problems using Big Data, Machine Learning, and Data Science tools and techniques.</p>
+          </article>
+
+          <article class="card award-card">
+            <header class="card-header">
+              <div class="card-title-meta">
+                <h3>Certification — Fundamental IT Engineer Examination (IPA, Japan)</h3>
+                <span class="meta">2022/04</span>
+              </div>
+              <a class="thumb-link" href="https://example.com/ipa-fe-credential" target="_blank" rel="noopener" title="View credential">
+                <img class="award-thumb" src="assets/certificates/itfe.jpg" alt="Fundamental IT Engineer Examination certificate thumbnail" />
+              </a>
+            </header>
+            <p>Assessed broad IT skills across algorithms, networking, databases, security, and more.</p>
+          </article>
+
+          <article class="card award-card">
+            <header class="card-header">
+              <div class="card-title-meta">
+                <h3>2nd Runners-up — BUET Robo Carnival</h3>
+                <span class="meta">2019/01</span>
+              </div>
+              <a class="thumb-link" href="https://example.com/buet-robo-carnival-credential" target="_blank" rel="noopener" title="View credential">
+                <img class="award-thumb" src="assets/certificates/rubu_carnival.jpg" alt="BUET Robo Carnival certificate thumbnail" />
+              </a>
+            </header>
+            <p>Project: Able — A complete learning solution for visually impaired learners.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Publications -->
+    <section id="publications" class="section">
+      <div class="container">
+        <h2 class="section-title">Publications</h2>
+        <ul class="pub-list">
+          <li class="pub-item">
+            <a class="pub-title" href="https://doi.org/10.1109/R10-HTC54060.2022.9929681" target="_blank" rel="noopener">
+              Decentralized Neural Network Based Collaborative Filtering For Privacy Concern Recommendation Systems
+            </a>
+            <div class="pub-meta">IEEE R10-HTC 2022, pp. 432–437 • 2022/09</div>
+          </li>
+          <li class="pub-item">
+            <a class="pub-title" href="https://doi.org/10.1007/978-3-031-20859-1_19" target="_blank" rel="noopener">
+              K Nearest Neighbour Collaborative Filtering for Expertise Recommendation Systems
+            </a>
+            <div class="pub-meta">DCAI 2022, LNNS vol 583, pp. 187–196 • 2022/12</div>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- Training & Workshops -->
+    <section id="training" class="section alt">
+      <div class="container">
+        <h2 class="section-title">Training & Workshops</h2>
+        <div class="list">
+          <div class="list-item training-item">
+            <h3>LICT TOP-UP IT Training for Java</h3>
+            <div class="meta">2017/09–2018/03 • ICT Division, Bangladesh</div>
+            <p>Java Core, J2EE, JavaFX, Servlet, WebSocket, JDBC, REST, JSON, XML.</p>
+            <p class="about-training">
+              About: National capacity-building program emphasizing enterprise Java development and deployment best practices.
+            </p>
+            <div class="item-actions">
+              <a class="action-link" href="https://lict.gov.bd/" target="_blank" rel="noopener">About the program</a>
+              <a class="action-link" href="https://example.com/lict-project" target="_blank" rel="noopener">View related project</a>
+            </div>
+          </div>
+
+          <div class="list-item training-item">
+            <h3>Training on Software Development Lifecycle — Kovair Software Inc.</h3>
+            <div class="meta">2019/12–2020/12</div>
+            <p>SDLC, Requirements Engineering, System Design & Analysis.</p>
+            <p class="about-training">
+              About: Hands-on workshops covering end-to-end lifecycle with tooling for traceability and governance.
+            </p>
+            <div class="item-actions">
+              <a class="action-link" href="https://www.kovair.com/" target="_blank" rel="noopener">Program details</a>
+              <a class="action-link" href="https://example.com/kovair-project" target="_blank" rel="noopener">View related project</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Certifications & Online Courses -->
+    <section id="certifications" class="section">
+      <div class="container">
+        <h2 class="section-title">Certifications & Online Courses</h2>
+        <div class="cert-grid">
+          <article class="cert-card">
+            <a class="cert-link" href="https://www.coursera.org/account/accomplishments/verify/GOOGLE-DATA-ANALYTICS-ID" target="_blank" rel="noopener" title="View credential">
+              <img src="assets/certificates/google-data-analytics.jpg" alt="Google Data Analytics certificate" />
+            </a>
+            <h3>Google Data Analytics (8 Courses)</h3>
+            <div class="meta">Coursera • 2022/10</div>
+          </article>
+          <article class="cert-card">
+            <a class="cert-link" href="https://www.coursera.org/account/accomplishments/verify/DEEP-LEARNING-SPEC-ID" target="_blank" rel="noopener" title="View credential">
+              <img src="assets/certificates/deep_learning.jpg" alt="Deep Learning Specialization certificate" />
+            </a>
+            <h3>Deep Learning Specialization (5 Courses)</h3>
+            <div class="meta">Coursera • 2019/05</div>
+          </article>
+          <article class="cert-card">
+            <a class="cert-link" href="https://example.com/bdren-bigdata-credential" target="_blank" rel="noopener" title="View credential">
+              <img src="assets/certificates/bdren_bigdata.jpg" alt="Introduction to Big Data and Hadoop certificate" />
+            </a>
+            <h3>Introduction to Big Data and Hadoop</h3>
+            <div class="meta">BdREN • 2020/05</div>
+          </article>
+          <article class="cert-card">
+            <a class="cert-link" href="https://example.com/btrc-amateur-radio-credential" target="_blank" rel="noopener" title="View credential">
+              <img src="assets/certificates/ameteur_radio.jpg" alt="BTRC Amateur Radio Examination certificate" />
+            </a>
+            <h3>Amateur Radio Service Examination</h3>
+            <div class="meta">BTRC • 2018/12</div>
+          </article>
+          <article class="cert-card">
+            <a class="cert-link" href="https://www.coursera.org/account/accomplishments/verify/GIT-GITHUB-ID" target="_blank" rel="noopener" title="View credential">
+              <img src="assets/certificates/git_github.jpg" alt="Introduction to Git and GitHub certificate" />
+            </a>
+            <h3>Introduction to Git and GitHub</h3>
+            <div class="meta">Coursera • 2019/04</div>
+          </article>
+          <article class="cert-card">
+            <a class="cert-link" href="https://www.coursera.org/account/accomplishments/verify/WEB-DEV-ID" target="_blank" rel="noopener" title="View credential">
+              <img src="assets/certificates/html_css_js.jpg" alt="HTML, CSS, and JavaScript for Web Developers certificate" />
+            </a>
+            <h3>HTML, CSS, and JavaScript for Web Developers</h3>
+            <div class="meta">Coursera • 2021/03</div>
+          </article>
+          <article class="cert-card">
+            <a class="cert-link" href="https://www.datacamp.com/statement-of-accomplishment/course/d6590bcdf7655127648086dee4a6609a152446e8?raw=1" target="_blank" rel="noopener" title="View credential">
+              <img src="assets/certificates/airflow_datacamp.jpg" alt="Introduction to Apache Airflow in Python" />
+            </a>
+            <h3>Introduction to Apache Airflow in Python</h3>
+            <div class="meta">DataCamp • 2025/07</div>
+          </article>
+          <article class="cert-card">
+            <a class="cert-link" href="https://www.credly.com/badges/3f2c6ce4-4523-461b-9d0e-d7536b820e9a?source=linked_in_profile" target="_blank" rel="noopener" title="View credential">
+              <img src="assets/certificates/atnt.jpg" alt="AT&T Summer Learning Academy Extern certificate" />
+            </a>
+            <h3>AT&T Summer Learning Academy Extern</h3>
+            <div class="meta">AT&T • 2020/06</div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Extra Curricular & Volunteering -->
+    <section id="extracurricular" class="section alt">
+      <div class="container">
+        <h2 class="section-title">Extra Curricular & Volunteering</h2>
+        <div class="list two-col">
+          <div class="list-item">
+            <h3>Leadership</h3>
+            <ul>
+              <li>Former Senior Executive — BRAC University Computer Club (BUCC)</li>
+              <li>Former Junior Executive — BRAC University Electrical and Electronic Club (BUEEC)</li>
+            </ul>
+          </div>
+          <div class="list-item">
+            <h3>Volunteer Work</h3>
+            <ul>
+              <li>(2018) Data Entry Operator — Bangladesh Chars Tobacco Assessment Project (CTAP), funded by BCCP as part of the Johns Hopkins Bloomberg Initiative and BRAC University.</li>
+              <li>(2017) Fundraising and distribution among flood-affected people in Dinajpur district with BUEEC.</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact -->
+    <section id="contact" class="section">
+      <div class="container">
+        <h2 class="section-title">Contact</h2>
+
+        <div class="contact-grid">
+          <div class="contact-card">
+            <h3>Let’s work together</h3>
+            <p>For AI/BI projects, advisory, or speaking—reach out. I respond within 1–2 business days.</p>
+            <ul class="contact-list">
+              <li><strong>Email:</strong> <a href="mailto:prasenjit9619@gmail.com">prasenjit9619@gmail.com</a></li>
+              <li><strong>Phone:</strong> <a href="tel:+8801725042634">+880 1725-042634</a></li>
+              <li><strong>Location:</strong> Dhaka Division, Bangladesh</li>
+            </ul>
+            <div class="social">
+              <a href="https://github.com/prasenjit9619" target="_blank" rel="noopener" aria-label="GitHub" class="social-link">GitHub</a>
+              <a href="https://www.linkedin.com/in/prasenjit9619" target="_blank" rel="noopener" aria-label="LinkedIn" class="social-link">LinkedIn</a>
+              <a href="https://prasenjit9619.github.io/portfolio/" target="_blank" rel="noopener" aria-label="Portfolio" class="social-link">Portfolio</a>
+            </div>
+          </div>
+
+          <form class="contact-form" id="contactForm" name="contact" autocomplete="on" method="POST" action="contact.php" novalidate>
+            <label>
+              <span>Name</span>
+              <input type="text" name="name" placeholder="Your full name" required>
+            </label>
+            <label>
+              <span>Email</span>
+              <input type="email" name="email" placeholder="you@example.com" required>
+            </label>
+            <label>
+              <span>Message</span>
+              <textarea name="message" rows="5" placeholder="Tell me about your project…" required></textarea>
+            </label>
+
+            <!-- Honeypot -->
+            <input type="text" name="website" id="website" autocomplete="off" tabindex="-1" style="position:absolute; left:-5000px;" aria-hidden="true">
+
+            <button class="btn primary" type="submit">Send message</button>
+            <p class="form-note">Your info is used only to respond to your message.</p>
+            <div id="formStatus" class="form-status" role="status" aria-live="polite"></div>
+          </form>
+        </div>
+      </div>
+    </section>
   </main>
 
-  <footer id="footer" class="footer position-relative light-background">
-
-    <div class="container">
-      <div class="copyright text-center">
-        <p>© 2025 Prasenjit Das</p>
-        <!--<p>Total Visits: <span id="visitor-count">Loading...</span></p>-->
-      </div>
-
+  <!-- Footer -->
+  <footer class="site-footer">
+    <div class="container footer-grid">
+      <p>© <span id="year"></span> Prasenjit Das. All rights reserved.</p>
+      <nav aria-label="Footer">
+        <a href="#about">About</a>
+        <a href="#experience">Experience</a>
+        <a href="#publications">Publications</a>
+        <a href="#contact">Contact</a>
+      </nav>
+    </div>
   </footer>
 
+  <!-- Back to top -->
+  <button id="toTop" class="to-top" aria-label="Back to top">↑</button>
 
-
-  <!-- Scroll Top -->
-  <a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
-
-  <!-- Preloader -->
-  <div id="preloader"></div>
-
-  <!-- Vendor JS Files -->
-  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-  <script src="assets/vendor/php-email-form/validate.js"></script>
-  <script src="assets/vendor/aos/aos.js"></script>
-  <script src="assets/vendor/typed.js/typed.umd.js"></script>
-  <script src="assets/vendor/purecounter/purecounter_vanilla.js"></script>
-  <script src="assets/vendor/waypoints/noframework.waypoints.js"></script>
-  <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
-  <script src="assets/vendor/imagesloaded/imagesloaded.pkgd.min.js"></script>
-  <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
-  <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
-
-
-  <!-- Main JS File -->
-  <script src="assets/js/main.js"></script>
-  <!-- <script src="assets/js/theme-toggle.js"></script> -->
-
-  <!-- Add Schema Markup before closing body tag -->
-<!-- <script type="application/ld+json">
-  {
-    "@context": "http://schema.org",
-    "@type": "Person",
-    "name": "Prasenjit Das",
-    "jobTitle": "Data Warehouse Developer",
-    "url": "https://prasenjit9619.github.io/portfolio/",
-    "sameAs": [
-      "https://www.linkedin.com/in/prasenjit9619",
-      "https://github.com/prasenjit9619",
-      "https://x.com/zreptilia"
-    ]
-  }
-  </script> -->
-  
-
+  <script src="script.js"></script>
 </body>
-
 </html>
