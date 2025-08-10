@@ -1,0 +1,112 @@
+site/
+├── index.html
+├── styles.css
+├── script.js
+├── contact.php
+├── sitemap.xml
+├── robots.txt
+└── assets/
+    ├── avatar.jpg
+    ├── hero-bg.jpg
+    ├── logos/
+    │   ├── bracu.png
+    │   ├── bracbank.png
+    │   ├── foodpanda.png
+    │   └── kovair.png
+    └── certificates/              # placeholders for certificate thumbnails
+        ├── google-data-analytics.jpg
+        ├── deep-learning-spec.jpg
+        ├── bdren-bigdata.jpg
+        ├── btrc-amateur-radio.jpg
+        ├── google-git-github.jpg
+        ├── coursera-web-dev.jpg
+        ├── datacamp-python.jpg
+        └── att-sla.jpg
+
+
+
+:root {
+  /* Light theme (previous good colours) */
+  --bg: #ffffff;
+  --bg-grad: linear-gradient(180deg, #ffffff, #f3f4f6 60%, #f3f4f6);
+  --panel: #ffffff;
+  --text: #1f2937;
+  --muted: #4b5563;
+  --accent: #2563eb;        /* previous bright blue accent */
+  --accent-2: #3b82f6;      /* complementary lighter blue */
+  --border: #e5e7eb;
+
+  --radius: 12px;
+  --radius-sm: 10px;
+  --radius-lg: 16px;
+  --shadow: 0 4px 12px rgba(0,0,0,0.08);
+  --container: 1080px;
+}
+
+[data-theme="dark"] {
+  /* Dark theme (previous good colours) */
+  --bg: #111827;
+  --bg-grad: linear-gradient(180deg, #111827, #1f2937 60%, #1f2937);
+  --panel: #1f2937;
+  --text: #f3f4f6;
+  --muted: #9ca3af;
+  --accent: #3b82f6;        /* vivid blue in dark */
+  --accent-2: #60a5fa;      /* lighter blue in dark */
+  --border: #374151;
+
+  --shadow: 0 4px 12px rgba(0,0,0,0.4);
+}
+
+  --shadow: 0 8px 24px rgba(0,0,0,.12);
+
+  --shadow: 0 8px 24px 2px rgba(0,0,0,.35);
+
+  --shadow: 
+    0 4px 6px rgba(0,0,0,0.2),   /* small, sharp contact shadow */
+    0 14px 28px rgba(0,0,0,0.35); /* large, soft ambient shadow */
+
+# image preview
+  html:
+  <a class="cert-link" href="assets/certificates/google-data-analytics.jpg" data-lightbox>
+    <img src="assets/certificates/google-data-analytics.jpg" alt="Google Data Analytics certificate" />
+  </a>
+
+css:
+.lightbox-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.85);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 9999;
+  cursor: zoom-out;
+}
+
+.lightbox-overlay img {
+  max-width: 90vw;
+  max-height: 90vh;
+  border-radius: 12px;
+  box-shadow: 0 20px 60px rgba(0,0,0,0.5);
+}
+
+
+js:
+document.querySelectorAll('[data-lightbox]').forEach(link => {
+  link.addEventListener('click', e => {
+    e.preventDefault();
+    const src = link.getAttribute('href');
+    const overlay = document.createElement('div');
+    overlay.className = 'lightbox-overlay';
+    overlay.innerHTML = `<img src="${src}" alt="Certificate preview">`;
+    overlay.addEventListener('click', () => overlay.remove());
+    document.body.appendChild(overlay);
+  });
+});
+
+Result:
+Clicking any certificate image opens it in a full-screen overlay.
+
+Clicking anywhere on the overlay closes it.
+
+Works with any image link that has data-lightbox.
