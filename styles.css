@@ -202,8 +202,8 @@ body.nav-open .nav-toggle .bar:nth-child(3) { transform: translateY(0) rotate(-4
 [data-theme="dark"] .hero-bg { opacity: .35; }
 .hero-grid {
   /* display: grid; grid-template-columns: 1.25fr .9fr; gap: 36px; align-items: center; */
-  display: grid; grid-template-columns: 340px 660px; gap: 80px; align-items: center;
-  /* display: grid; grid-template-columns: .85fr 1.3fr; gap: 36px; align-items: center; */
+  /* display: grid; grid-template-columns: 340px 660px; gap: 80px; align-items: center; */
+  display: grid; grid-template-columns: 1fr 2fr; gap: 60px; align-items: center;
 }
 .title { font-size: 40px; margin: 0 0 6px; font-weight: 800; letter-spacing: .2px; }
 .subtitle { margin: 0 0 14px; color: var(--muted); font-weight: 600; }
