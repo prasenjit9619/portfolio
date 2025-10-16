@@ -117,3 +117,37 @@ Works with any image link that has data-lightbox.
 const saved = localStorage.getItem('theme');
 const current = document.documentElement.getAttribute('data-theme');
 const mode = saved || current || (prefersDark.matches ? 'dark' : 'light');
+
+
+E:\Project\portfolio_github\portfolio
+
+git pull origin main
+
+git add .
+git commit -m "update"
+git push origin
+
+git ls-files
+
+git status
+
+
+If you edited a specific branch on GitHub, make sure you're on the same branch locally:
+bash
+git checkout branch-name
+git pull origin branch-name
+
+If your local repo has uncommitted changes, Git may block the pull. You can stash them:
+bash
+git stash
+git pull origin main
+git stash pop
+
+
+
+https://www.sanjaysaha.info/
+
+https://hugoblox.com/?utm_campaign=poweredby
+
+https://github.com/HugoBlox/hugo-blox-builder
+
