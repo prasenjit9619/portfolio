@@ -429,9 +429,31 @@ body.nav-open .nav-toggle .bar:nth-child(3) { transform: translateY(0) rotate(-4
 }
 .cert-link:hover img { transform: translateY(-2px) scale(1.01); box-shadow: 0 14px 40px rgba(0,0,0,.25); }
 
+
+/* ACTIVITIES */
+.list { display: grid; gap: 14px; }
+.list.two-col { grid-template-columns: repeat(2, 1fr); }
+@media (max-width: 900px) { .list.two-col { grid-template-columns: 1fr; } }
+.list-item {
+  background: var(--panel); border: 1px solid var(--border); border-radius: 12px; box-shadow: var(--shadow);
+  padding: 14px;
+}
+.activity-item .meta { color: var(--muted); margin: 4px 0 8px; }
+.about-activity {
+  margin: 8px 0; padding: 10px; background: color-mix(in oklab, var(--panel) 92%, transparent);
+  border: 1px dashed var(--border); border-radius: 10px; color: var(--muted);
+}
+.item-actions { display: inline-flex; gap: 12px; flex-wrap: wrap; }
+.action-link {
+  display: inline-flex; align-items: center; gap: 6px; padding: 6px 10px; border-radius: 10px;
+  border: 1px solid var(--border); background: var(--panel);
+}
+.action-link:hover { text-decoration: none; background: color-mix(in oklab, var(--panel) 85%, transparent); }
+
+
 /* EXTRA CURRICULAR */
-.list-item h3 { margin: 0 0 6px; font-size: 18px; }
-.list-item ul { margin: 8px 0 0; padding-left: 18px; }
+/* .list-item h3 { margin: 0 0 6px; font-size: 18px; }
+.list-item ul { margin: 8px 0 0; padding-left: 18px; } */
 
 
 /* POSTS */

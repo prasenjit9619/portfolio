@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://www.yourdomain.com/sitemap.xml
+Sitemap: https://prasenjit9619.github.io/portfolio/sitemap.xml
