@@ -515,6 +515,27 @@ body.nav-open .nav-toggle .bar:nth-child(3) { transform: translateY(0) rotate(-4
 }
 
 
+/* Embaded POSTS */
+.post-grid .post-card { display: flex; flex-direction: column; gap: 0.75rem; }
+
+.post-card .post-embed {
+  position: relative;
+  width: 100%;
+  padding-top: 75%;
+  overflow: hidden;
+  border-radius: 8px;
+  background: var(--card-bg, #0b0b0b);
+}
+
+.post-card .post-embed iframe {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  border: 0;
+  display: block;
+}
+
 /* CONTACT */
 .contact-grid { display: grid; grid-template-columns: 1.1fr 1fr; gap: 16px; align-items: start; }
 @media (max-width: 900px) { .contact-grid { grid-template-columns: 1fr; } }
