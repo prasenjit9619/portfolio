@@ -512,7 +512,8 @@ body.nav-open .nav-toggle .bar:nth-child(3) { transform: translateY(0) rotate(-4
 .post-card .post-embed {
   position: relative;
   width: 100%;
-  height: 350px; /* Set a fixed reasonable height */
+  /* Set a fixed reasonable height */
+  /* height: 350px;  */
   padding-top: 75%;
   overflow: hidden;
   border-radius: 8px;
