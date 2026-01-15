@@ -202,10 +202,27 @@ document.addEventListener('DOMContentLoaded', () => {
       const action = contactForm.getAttribute('action') || '';
       // If you have a backend endpoint, this will work; otherwise will no-op silently due to no-cors/fallback
       let ok = false;
+      // if (action) {
+      //   const res = await fetch(action, { method: 'POST', body: formData });
+      //   ok = res.ok;
+      // } 
       if (action) {
-        const res = await fetch(action, { method: 'POST', body: formData });
-        ok = res.ok;
-      } else {
+        const data = {
+          name: contactForm.name.value,
+          email: contactForm.email.value,
+          message: contactForm.message.value
+        };
+        const res = await fetch(action, {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify(data)
+        });
+        if (res.ok) {
+          const result = await res.json();
+          ok = result.ok;
+        }
+      }
+      else {
         // Fallback: simulate success
         await sleep(600);
         ok = true;
