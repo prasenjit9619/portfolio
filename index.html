@@ -61,6 +61,10 @@
     ]
   }
   </script>
+
+  <!-- EmailJS -->
+  <!-- <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/emailjs.min.js"></script> -->
+
 </head>
 <body>
   <!-- Header -->
@@ -151,7 +155,7 @@
               </a>
             </div>
 
-            <!-- <a class="btn ghost" href="#contact">Contact</a> -->
+            <a class="btn ghost" href="#contact">Contact</a>
           </div>
 
           <!-- <ul class="quick-facts">
@@ -427,28 +431,6 @@
         </div>
       </div>
     </section>
-
-
-    <!-- Publications
-    <section id="publications" class="section">
-      <div class="container">
-        <h2 class="section-title">Publications</h2>
-        <ul class="pub-list">
-          <li class="pub-item">
-            <a class="pub-title" href="https://doi.org/10.1109/R10-HTC54060.2022.9929681" target="_blank" rel="noopener">
-              Decentralized Neural Network Based Collaborative Filtering For Privacy Concern Recommendation Systems
-            </a>
-            <div class="pub-meta">IEEE R10-HTC 2022, pp. 432–437 • 2022/09</div>
-          </li>
-          <li class="pub-item">
-            <a class="pub-title" href="https://doi.org/10.1007/978-3-031-20859-1_19" target="_blank" rel="noopener">
-              K Nearest Neighbour Collaborative Filtering for Expertise Recommendation Systems
-            </a>
-            <div class="pub-meta">DCAI 2022, LNNS vol 583, pp. 187–196 • 2022/12</div>
-          </li>
-        </ul>
-      </div>
-    </section> -->
 
     <!-- Training & Workshops -->
     <section id="training" class="section alt">
@@ -758,9 +740,12 @@
             </div>
           </div>
 
-          <!-- <form class="contact-form" id="contactForm" name="contact" autocomplete="on" method="POST" action="contact.php" novalidate> -->
+          <!-- Formspree -->
           <form class="contact-form" id="contactForm" name="contact" autocomplete="on" method="POST" action="https://formspree.io/f/xojjvdyw" novalidate>
-            <label>
+          <!-- EMAILJS -->
+          <!-- <form class="contact-form" id="contactForm" name="contact" autocomplete="on" method="POST" novalidate> -->
+            
+              <label>
               <span>Name</span>
               <input type="text" name="name" placeholder="Your full name" required>
             </label>

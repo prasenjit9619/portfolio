@@ -11,6 +11,17 @@ document.addEventListener('DOMContentLoaded', () => {
   const yearEl = document.getElementById('year');
   const contactForm = document.getElementById('contactForm');
   const formStatus = document.getElementById('formStatus');
+  
+  // EMAILJS V1
+  // emailjs.init('WPI8_bA50Q97qJYdE');  
+
+  // EMAILJS V2
+  // Check if emailjs is loaded before initializing
+  // if (typeof emailjs !== 'undefined') {
+  //   emailjs.init('WPI8_bA50Q97qJYdE');
+  // } else {
+  //   console.error("EmailJS SDK failed to load. Check your ad blocker.");
+  // }
 
   /* ---------- YEAR ---------- */
   if (yearEl) yearEl.textContent = new Date().getFullYear();
@@ -198,14 +209,10 @@ document.addEventListener('DOMContentLoaded', () => {
       btn && (btn.disabled = true, btn.textContent = 'Sending…');
       showStatus('', false);
 
+      // FORMSPREE:
       const formData = new FormData(contactForm);
       const action = contactForm.getAttribute('action') || '';
-      // If you have a backend endpoint, this will work; otherwise will no-op silently due to no-cors/fallback
       let ok = false;
-      // if (action) {
-      //   const res = await fetch(action, { method: 'POST', body: formData });
-      //   ok = res.ok;
-      // } 
       if (action) {
         const data = {
           name: contactForm.name.value,
@@ -227,7 +234,18 @@ document.addEventListener('DOMContentLoaded', () => {
         await sleep(600);
         ok = true;
       }
+      
 
+      // EMAILJS:
+      // const data = {
+      //   name: contactForm.name.value,
+      //   email: contactForm.email.value,
+      //   message: contactForm.message.value
+      // };
+      // await emailjs.send('service_25c5b45', 'template_q0myoye', data);  // Replace IDs
+      // const ok = true;  // EmailJS throws on error, so if it reaches here, it's success
+
+      
       if (ok) {
         showStatus('Thanks! I’ll get back to you within 1–2 business days.', true);
         contactForm.reset();
